@@ -415,6 +415,16 @@ typedef struct RTSPState {
      */
     char *user_agent;
 
+    /**
+     * Range header override; string.
+     */
+    char *range;
+
+    /**
+     * Rate-Control header; optional string.
+     */
+    char *rate_control;
+
     char default_lang[4];
     int buffer_size;
     int pkt_size;

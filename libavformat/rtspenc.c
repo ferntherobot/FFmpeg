@@ -115,8 +115,13 @@ static int rtsp_write_record(AVFormatContext *s)
     RTSPMessageHeader reply1, *reply = &reply1;
     char cmd[MAX_URL_SIZE];
 
-    snprintf(cmd, sizeof(cmd),
-             "Range: npt=0.000-\r\n");
+    if (rt->range != NULL) {
+        snprintf(cmd, sizeof(cmd),
+                 "Range: %s\r\n", rt->range);
+    } else {
+        snprintf(cmd, sizeof(cmd),
+                 "Range: npt=0.0000-\r\n");
+    }
     ff_rtsp_send_cmd(s, "RECORD", rt->control_uri, cmd, reply, NULL);
     if (reply->status_code != RTSP_STATUS_OK)
         return ff_rtsp_averror(reply->status_code, -1);
