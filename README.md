@@ -1,3 +1,24 @@
+## Modifications to FFmpeg
+
+This repository is based on FFmpeg (https://ffmpeg.org), with custom changes to allow for Range and Rate-Control RTSP headers based on discussions from the ffmpeg-devel mailing list:
+- https://ffmpeg.org/pipermail/ffmpeg-devel/2020-November/272826.html
+
+Modifications authored by ferntherobot on May 18, 2025.
+
+This build is licensed under the GNU **LGPL v2.1 or later**, consistent with the original FFmpeg licensing. Note: Some components of FFmpeg are licensed under the GPL; see below for more information.
+
+### License
+
+FFmpeg is primarily licensed under the GNU **Lesser General Public License (LGPL) v2.1 or later**, with some optional parts under the **GNU General Public License (GPL) v2 or later**. For details, see the `COPYING.LGPLv2.1` and `COPYING.GPLv2` files in this repository.
+
+If you build FFmpeg with GPL-only components enabled, the resulting binaries are subject to the terms of the GPL.
+
+### Credits
+
+This fork includes modifications based on contributions by **Yakov Okshtein** and **Andriy Gelman**, as posted on the ffmpeg-devel mailing list in November 2020:
+- https://ffmpeg.org/pipermail/ffmpeg-devel/2020-November/272826.html
+
+
 FFmpeg README
 =============
 
